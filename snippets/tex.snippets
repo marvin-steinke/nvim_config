@@ -1,0 +1,180 @@
+snippet begin
+	\\begin{${1:env}}
+		${0:${VISUAL}}
+	\\end{$1}
+
+snippet tab
+	\\begin{${1:tabular}}{${2:c}}
+		${0:${VISUAL}}
+	\\end{$1}
+snippet center
+	\\begin{center}
+		${0:${VISUAL}}
+	\\end{center}
+snippet ali
+	\\begin{align*}
+		${0:${VISUAL}}
+	\\end{align*}
+snippet eql
+	\\begin{equation*}
+		${0:${VISUAL}}
+	\\end{equation*}
+snippet sec
+	\\section{${1:${VISUAL}}}
+	$0
+snippet it
+	\\item ${1:${VISUAL}}
+snippet enum
+	\\begin{enumerate}
+		\\item ${1:${VISUAL}}
+	\\end{enumerate}
+snippet item
+	\\begin{itemize}
+		\\item ${1:${VISUAL}}
+	\\end{itemize}
+snippet sec*
+	\\section*{${1:${VISUAL}}}
+	$0
+snippet sub
+	\\subsection{${1:${VISUAL}}}
+	$0
+snippet sub*
+	\\subsection*{${1:${VISUAL}}}
+	$0
+snippet ita
+	\\textit{${1:${VISUAL}}}${0}
+snippet bf
+	\\textbf{${1:${VISUAL}}}${0}
+snippet under
+	\\underline{${1:${VISUAL}}}${0}
+snippet over
+	\\overline{${1:${VISUAL}}}${0}
+snippet emp
+	\\emph{${1:${VISUAL}}}${0}
+snippet sc
+	\\textsc{${1:${VISUAL}}}${0}
+snippet texttt
+	\\texttt{${1:${VISUAL}}}${0}
+snippet fig
+	\\begin{figure}
+		\\centering
+		${0}
+		\\caption{${1}}
+		\\label{fig:${2}}
+	\\end{figure}
+snippet includegraphics
+	\\includegraphics[width=${2:\\linewidth}]{${1}}
+snippet stackrel
+	\\stackrel{${1:above}}{${2:below}}${0}
+snippet frac
+	\\frac{${1:num}}{${2:denom}}${0}
+snippet sum
+	\\sum^{${1:n}}_{${2:i=1}}${0}
+snippet lim
+	\\lim_{${1:n \\to \\infty}}${0}
+snippet mbox
+	\\mbox{${1:${VISUAL}}}${0}
+snippet \{
+	\\{ ${0} \\}
+snippet url
+	\\url{${1}} ${0}
+snippet enq
+	\\enquote{${1:${VISUAL}}}${0}
+snippet brief
+	\\documentclass{scrlttr2}
+
+	\\LoadLetterOption{/home/marvin/Documents/Vorlage/brief}
+
+	\\begin{document}
+
+	\\begin{letter}{
+	% ===== Zielanschrift =====
+	${1:Empfänger\\\\
+	Empfängerstraße 12\\\\
+	12345 Empfängerort\\\\}
+	% =========================
+	}
+
+	%${2}\\printstamp[/home/marvin/Downloads/stamp.pdf]
+
+	% ======= Geschäftszeichenzeile =========
+	\\setkomavar{yourref}{}          % Ihr Zeichen
+	\\setkomavar{yourmail}{}         % Ihr Schreiben vom
+	\\setkomavar{myref}{}            % Unser Zeichen
+	\\setkomavar{customer}{}         % Kundennummer
+	\\setkomavar{invoice}{}          % Rechnungsnummer
+	\\setkomavar{place}{Berlin}      % Ort
+	\\setkomavar{date}{\\today}       % Datum
+	% =======================================
+
+	\\setkomavar{subject}{${3:Betreff}}
+
+	\\opening{Sehr geehrte Damen und Herren,}
+
+	${0}
+
+	%\\signature{/home/marvin/Documents/Vorlage/Unterschrift.jpg}
+
+	\\closing{Mit freundlichen Grüßen}
+
+	\\end{letter}
+
+	%\\includepdf[pages=1-4,6]{pfad/zu/pdf/dokument.pdf}
+
+	\\end{document}
+snippet plot
+	\\documentclass{standalone}
+	\\usepackage{pgfplots}
+	\\pgfplotsset{compat=newest}
+
+	\\begin{document}
+
+	\\begin{tikzpicture}
+	    \\begin{axis}[
+		    title={${1:Title}},
+		    xlabel={${2:x}},
+		    %xtick=data,
+		    ylabel={${3:y}},
+		    %ytick=data,
+		    ymajorgrids=true,
+		    grid style=dashed,
+		    cycle list name=color list,
+		    %legend pos=outer north east,
+		    %height=8cm,
+		    %width=50cm,
+		    %scale only axis=true,
+	    ]
+		\\addplot[
+		    mark=square,
+		]
+		coordinates {
+		    ${4}
+		};
+	    \\end{axis}
+	\\end{tikzpicture}
+	\\hspace{.5cm}
+
+	\\end{document}
+snippet standard_doc
+	\\documentclass[a4paper]{article}
+
+	\\usepackage[utf8]{inputenc}
+	\\usepackage[english, ngerman]{babel}
+	\\usepackage{csquotes}
+	\\usepackage[T1]{fontenc}
+	\\usepackage{lmodern}
+	\\usepackage[hidelinks]{hyperref}
+	\\usepackage{graphicx}
+	\\usepackage{url}
+	\\usepackage[indent]{parskip}
+
+
+	\\title{${1:Title}}
+	\\author{Marvin Steinke}
+	\\date{\\today}
+
+	\\begin{document}
+	\\maketitle
+	\\end{document}
+snippet cite
+	\\cite{${1:${VISUAL}}}${0}
