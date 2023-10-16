@@ -85,11 +85,9 @@ let g:vimtex_compiler_latexmk = {
     \   '-shell-escape',
     \ ],
 \}
-let g:vimtex_context_pdf_viewer='zathura'
 let g:Tex_DefaultTargetFormat='pdf'
 let g:vimtex_view_enabled=1
 let g:vimtex_view_automatic=1
-let g:vimtex_view_general_viewer='zathura'
 
 " gruvbox
 let g:gruvbox_italic=1
